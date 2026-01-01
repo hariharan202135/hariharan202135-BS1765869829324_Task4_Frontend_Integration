@@ -1,26 +1,25 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { User } from '../models/user.model';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  private apiUrl = 'http://localhost:5000/users';
+  private apiUrl = "https://hariharan202135-bs1765869829324-task4.onrender.com"; // your backend URL
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(this.apiUrl);
+  getUsers(){
+    return this.http.get(`${this.apiUrl}/users`);
   }
 
-  addUser(user: User): Observable<any> {
-    return this.http.post(this.apiUrl, user);
+  addUser(data:any){
+    return this.http.post(`${this.apiUrl}/users`, data);
   }
 
-  deleteUser(id: string): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/${id}`);
+  deleteUser(id:any){
+    return this.http.delete(`${this.apiUrl}/users/${id}`);
   }
+
 }
