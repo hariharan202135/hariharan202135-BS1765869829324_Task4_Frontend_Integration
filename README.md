@@ -9,7 +9,7 @@ It includes **Angular frontend**, **Node.js + Express backend**, and **MongoDB d
 
 | Component | Link |
 |----------|------|
-| **Frontend (Angular - Vercel)** | https://task4-frontend-angular-er82piipl-hariharans-projects-db9603ec.vercel.app |
+| **Frontend (Angular - Vercel)** | https://task4-frontend-teal.vercel.app/|
 | **Backend API (Render)** | https://hariharan202135-bs1765869829324-task4.onrender.com |
 | **GET All Users API** | https://hariharan202135-bs1765869829324-task4.onrender.com/users |
 
