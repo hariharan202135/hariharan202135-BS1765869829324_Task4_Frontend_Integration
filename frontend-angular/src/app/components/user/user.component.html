@@ -1,0 +1,23 @@
+<h1>Frontend Angular Integration</h1>
+<h2>User Management</h2>
+
+<input type="text" placeholder="Name" [(ngModel)]="name">
+<input type="email" placeholder="Email" [(ngModel)]="email">
+<input type="number" placeholder="Age" [(ngModel)]="age">
+<button (click)="addUser()">Add User</button>
+
+<table border="1" width="60%" style="margin-top:20px;">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Age</th>
+    <th>Action</th>
+  </tr>
+
+  <tr *ngFor="let u of users">
+    <td>{{u.name}}</td>
+    <td>{{u.email}}</td>
+    <td>{{u.age}}</td>
+    <td><button (click)="deleteUser(u.id!)">Delete</button></td>
+  </tr>
+</table>

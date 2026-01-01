@@ -1,0 +1,28 @@
+.form-box{
+  width:280px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+}
+.form-box input{
+  margin:5px;
+  padding:7px;
+}
+button{
+  margin-top:10px;
+  background:#007bff;
+  color:white;
+  padding:7px;
+  border:none;
+}
+.del{
+  background:red;
+  color:white;
+  margin-left:10px;
+}
+ul{
+  width:60%;
+  margin:auto;
+  margin-top:20px;
+  font-size:18px;
+}
