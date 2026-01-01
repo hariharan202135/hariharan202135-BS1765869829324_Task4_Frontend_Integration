@@ -1,12 +1,17 @@
-<h1>Frontend Angular Integration</h1>
-<h2>User Management</h2>
+<div style="text-align:center; margin-top:20px;">
+  <h2>User Management</h2>
 
-<input type="text" placeholder="Name" [(ngModel)]="name">
-<input type="email" placeholder="Email" [(ngModel)]="email">
-<input type="number" placeholder="Age" [(ngModel)]="age">
-<button (click)="addUser()">Add User</button>
+  <!-- 🔹 Add User Form -->
+  <input type="text" placeholder="Name" [(ngModel)]="name">
+  <input type="text" placeholder="Email" [(ngModel)]="email">
+  <input type="number" placeholder="Age" [(ngModel)]="age">
+  <button (click)="addUser()">Add User</button>
+</div>
 
-<table border="1" width="60%" style="margin-top:20px;">
+<br>
+
+<!-- 🔹 User Table -->
+<table border="1" align="center" cellpadding="10" style="border-collapse: collapse;">
   <tr>
     <th>Name</th>
     <th>Email</th>
@@ -18,6 +23,8 @@
     <td>{{u.name}}</td>
     <td>{{u.email}}</td>
     <td>{{u.age}}</td>
-    <td><button (click)="deleteUser(u.id!)">Delete</button></td>
+
+    <!-- important fix here 👇 -->
+    <td><button (click)="deleteUser(u._id!)">Delete</button></td>
   </tr>
 </table>
