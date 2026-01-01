@@ -35,7 +35,7 @@ export class UserComponent {
     if (!this.name || !this.email || !this.age) return;
 
     const newUser: User = {
-      id: Date.now().toString(),
+      _id: Date.now().toString(),
       name: this.name,
       email: this.email,
       age: this.age,
