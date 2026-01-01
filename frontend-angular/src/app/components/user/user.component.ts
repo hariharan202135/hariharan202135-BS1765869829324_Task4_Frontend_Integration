@@ -26,7 +26,8 @@ export class UserComponent {
 
   getUsers() {
     this.userService.getUsers().subscribe((data) => {
-      this.users = data;
+      this.users = data as User[];
+
     });
   }
 
